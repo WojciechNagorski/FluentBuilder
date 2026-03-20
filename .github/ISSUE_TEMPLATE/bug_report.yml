@@ -1,0 +1,81 @@
+name: Bug Report
+description: Report a bug in FluentBuilder (C# source code generator)
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Scope of this repository
+        **FluentBuilder** is a **compile-time C# source code generator** that automatically creates fluent builder classes for models and DTOs using Roslyn.
+
+        This repository is **not** responsible for:
+        - Kubernetes / Helm deployment issues
+        - Database migration failures
+        - Runtime application errors unrelated to generated builder code
+        - CI/CD pipeline configuration issues
+
+        If your issue is about deployment (e.g., Helm pre-upgrade hooks, Kubernetes jobs), please check your own deployment configuration. This repository cannot help with those issues.
+
+  - type: checkboxes
+    id: scope-check
+    attributes:
+      label: Scope confirmation
+      description: Please confirm your issue is related to FluentBuilder's code generation.
+      options:
+        - label: My issue is about the **generated C# builder code** produced by FluentBuilder
+          required: true
+        - label: My issue is **not** about deployment, Kubernetes, Helm, or other infrastructure
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: A clear description of the bug.
+      placeholder: Describe what is wrong with the generated builder code...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the issue?
+      placeholder: |
+        1. Annotate a class with [AutoGenerateBuilder]...
+        2. Build the project...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: FluentBuilder NuGet version
+      placeholder: e.g., 0.14.0
+    validations:
+      required: true
+
+  - type: input
+    id: dotnet
+    attributes:
+      label: .NET version
+      placeholder: e.g., .NET 8.0
+    validations:
+      required: false

@@ -1,0 +1,40 @@
+name: Feature Request
+description: Suggest a new feature for FluentBuilder (C# source code generator)
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Scope of this repository
+        **FluentBuilder** is a **compile-time C# source code generator** that automatically creates fluent builder classes for models and DTOs using Roslyn.
+
+        Feature requests should be about improving the **code generation** capabilities of FluentBuilder (e.g., new builder patterns, attribute options, generated code improvements).
+
+        This is **not** the right place for:
+        - Kubernetes / Helm deployment feature requests
+        - Database migration features
+        - Runtime application features unrelated to code generation
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature description
+      description: A clear description of the feature you would like to see in FluentBuilder.
+      placeholder: Describe the code generation feature you'd like...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Describe the use case / scenario where this feature would be helpful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: If possible, provide a code example showing what you'd like the generated code to look like.
+      render: csharp

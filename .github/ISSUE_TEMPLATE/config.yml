@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "❓ Question / Deployment issue"
+    url: https://stackoverflow.com/questions/tagged/fluent-builder
+    about: |
+      For general questions or deployment issues (Kubernetes, Helm, CI/CD, etc.), please use Stack Overflow.
+      FluentBuilder is a compile-time C# source code generator — it has no runtime or deployment components.
+  - name: "📖 Documentation"
+    url: https://github.com/WojciechNagorski/FluentBuilder/blob/main/README.md
+    about: Read the FluentBuilder documentation and usage examples.
